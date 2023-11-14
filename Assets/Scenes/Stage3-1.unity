@@ -1033,7 +1033,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1.7, y: 1.7}
   m_EdgeRadius: 0
 --- !u!114 &621109276
 MonoBehaviour:
@@ -1052,6 +1052,7 @@ MonoBehaviour:
   SpriteRight: {fileID: 21300028, guid: 15b407f3e228b484c8a8b51a211b559b, type: 3}
   movePower: 5
   jumpPower: 7.5
+  maxHealth: 1
 --- !u!50 &621109277
 Rigidbody2D:
   serializedVersion: 4
@@ -1488,7 +1489,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.259977
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1543,7 +1544,7 @@ MonoBehaviour:
   player: {fileID: 621109279}
   smoothing: 0.2
   minCameraBoundary: {x: 0, y: 0}
-  maxCameraBoundary: {x: 2000, y: 40}
+  maxCameraBoundary: {x: 105, y: 15}
 --- !u!1 &707478476
 GameObject:
   m_ObjectHideFlags: 0

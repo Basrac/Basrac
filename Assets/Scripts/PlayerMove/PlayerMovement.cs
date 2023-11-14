@@ -1,27 +1,37 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Animator animator;
     public SpriteRenderer Img_Renderer;
     public Sprite SpriteLeft;
     public Sprite SpriteRight;
     public float movePower = 1f;
     public float jumpPower = 1f;
+    public int maxHealth = 1;
+ 
 
     Rigidbody2D rigid;
-
+  
     public delegate void JumpAction();
     public event JumpAction OnJumpEvent;
 
     Vector3 movement;
     bool isJumping = false;
+    bool isDie = false;
+
+    int health = 1;
 
     //---------------------------------------------------[Override Function]
     //Initialization
     void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponentInChildren<Animator>();
+
+        health = maxHealth;
     }
 
     //Graphic & Input Updates	
@@ -36,11 +46,20 @@ public class PlayerMovement : MonoBehaviour
                 OnJumpEvent();
             }
         }
+
+        if(health == 0)
+        {
+            if (!isDie)
+                Die();
+            return;
+        }
     }
 
     //Physics engine Updates
     void FixedUpdate()
     {
+        if (health == 0)
+            return;
         Move();
         Jump();
     }
@@ -78,5 +97,53 @@ public class PlayerMovement : MonoBehaviour
         rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
 
         isJumping = false;
+    }
+
+    void Die()
+    {
+        isDie = true;
+
+        rigid.velocity = Vector2.zero;
+        animator.Play("Die");
+
+        BoxCollider2D[] colls = gameObject.GetComponents<BoxCollider2D>();
+        colls[0].enabled = false;
+        colls[1].enabled = false;
+
+        Vector2 dieVelocity = new Vector2(0, 10f);
+        rigid.AddForce(dieVelocity, ForceMode2D.Impulse);
+
+        Invoke("GameOver", 1f);
+
+        if(transform.position.y < -10f)
+        {
+            Die();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("obstacle"))
+        {
+            TakeDamage(10);
+        }
+
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+
+            Invoke("MoveToNextScene", 0.01f);
+        }
+    }
+
+    public void MoveToNextScene()
+    {
+        SceneManager.LoadScene("GameOver");
+
     }
 }
