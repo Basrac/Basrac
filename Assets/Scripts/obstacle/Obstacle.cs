@@ -13,7 +13,7 @@ public class Obstacle : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Player>().TakeDamage(10);
+            collision.gameObject.GetComponent<PlayerMovement>().TakeDamage(10);
         }
     }
 }
