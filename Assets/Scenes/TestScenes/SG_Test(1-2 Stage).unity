@@ -4372,6 +4372,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2440598583095938368, guid: 1dfa462b8db71154b8f2f45c56ecda61, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7141740575599340128, guid: 1dfa462b8db71154b8f2f45c56ecda61, type: 3}
       propertyPath: m_Name
       value: Grid
