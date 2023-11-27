@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject GameOverPopup;
+
     private Animator animator;
     public SpriteRenderer Img_Renderer;
     public Sprite SpriteLeft;
@@ -148,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void MoveToNextScene()
     {
-        SceneManager.LoadScene("GameOver");
+        GameOverPopup.SetActive(true);
 
     }
 }
