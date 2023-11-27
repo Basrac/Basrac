@@ -53,6 +53,13 @@ public class PlayerMovement : MonoBehaviour
                 Die();
             return;
         }
+        if (transform.position.y < -13f)
+        {
+            gameObject.SetActive(false);
+
+            Invoke("MoveToNextScene", 0.01f);
+        }
+
     }
 
     //Physics engine Updates
@@ -115,10 +122,7 @@ public class PlayerMovement : MonoBehaviour
 
         Invoke("GameOver", 1f);
 
-        if(transform.position.y < -10f)
-        {
-            Die();
-        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -139,6 +143,7 @@ public class PlayerMovement : MonoBehaviour
 
             Invoke("MoveToNextScene", 0.01f);
         }
+        
     }
 
     public void MoveToNextScene()
