@@ -11,7 +11,7 @@ public enum ItemType
     Etc
 }
 [System.Serializable]
-public class Item 
+public class Items 
 {
     public ItemType itemtype;
     public string itemName;

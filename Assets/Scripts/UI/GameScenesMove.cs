@@ -7,7 +7,7 @@ public class GameScenesMove : MonoBehaviour
 {
     public void GameScenesCtrl()
     {
-        SceneManager.LoadScene("KWKScene");
+        SceneManager.LoadScene("MainScene");
         Debug.Log("Main Menu Scene");
     }
 }

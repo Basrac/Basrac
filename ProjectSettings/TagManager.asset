@@ -8,6 +8,7 @@ TagManager:
   - cloud
   - Door
   - Wall
+  - Boom
   layers:
   - Default
   - TransparentFX

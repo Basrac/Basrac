@@ -9,7 +9,7 @@ public class ItemDateBase : MonoBehaviour
     {
         instance = this; 
     }
-    public List<Item>itemDB = new List<Item>();
+    public List<Items>itemDB = new List<Items>();
 
     public GameObject fieldItemPrefabs;
     public Vector3[] pos; 
