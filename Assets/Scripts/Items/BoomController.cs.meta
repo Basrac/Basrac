@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 3577b1d44146af9449ceadb493bb2da7
+guid: 48e489788bdb45346bb34b5aaa911119
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - boomPrefab: {fileID: 7992043235194865096, guid: f64dba190e1bbcc49958a1cb238e976e, type: 3}
+  - throwPoint: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
