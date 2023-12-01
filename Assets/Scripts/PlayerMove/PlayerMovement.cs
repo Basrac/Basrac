@@ -13,8 +13,11 @@ public class PlayerMovement : MonoBehaviour
     public float movePower = 1f;
     public float jumpPower = 1f;
     public int maxHealth = 1;
+    public int boom;
+    
+    
+    public int maxBoom;
  
-
     Rigidbody2D rigid;
   
     public delegate void JumpAction();
@@ -152,5 +155,23 @@ public class PlayerMovement : MonoBehaviour
     {
         GameOverPopup.SetActive(true);
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Boom")
+        {
+            BoomController boomcontroller = other.GetComponent<BoomController>();
+            switch (boomcontroller.type)
+            {
+                case BoomController.Type.Boom:
+                    boom += boomcontroller.value;
+                    if (boom > maxBoom)
+                        boom = maxBoom;
+                    break;
+
+            }
+            Destroy(other.gameObject);
+        }
     }
 }
