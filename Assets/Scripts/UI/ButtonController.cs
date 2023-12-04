@@ -21,7 +21,7 @@ public class ButtonController : MonoBehaviour
         SoundPopup.SetActive(true);
     }
 
-    // SettingPopup관련 버튼 
+    // Popup관련 버튼 
     public void SettingBtnButtonClick()
     {
         SettingPopup.SetActive(true);
@@ -31,6 +31,11 @@ public class ButtonController : MonoBehaviour
     public void ExitBtnButtonClick()
     {
         SettingPopup.SetActive(false);
+    }
+
+    public void ExitButtonClick()
+    {
+        SoundPopup.SetActive(false);
     }
 
     // 공통 버튼
