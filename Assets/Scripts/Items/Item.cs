@@ -1,20 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
-[CreateAssetMenu(menuName = "Item")]
-public class Item : ScriptableObject
+public class Item : MonoBehaviour
 {
-    public string objectName;
-    public Sprite sprite;
-    public int quantity;
-    public bool stackable;
-    public enum ItemType
+    [SerializeField] Text pickUpText;
+    bool isPickUp;
+
+    void Start()
     {
-        Boom
+        pickUpText.gameObject.SetActive(false);
+
     }
 
-    public ItemType itemType;
+    void Update()
+    {
+        if (isPickUp && Input.GetKeyDown(KeyCode.Space))
+            PickUp();
+
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag.Equals("Player"))
+        {
+            pickUpText.gameObject.SetActive(true);
+            isPickUp = true;
+
+        }
+
+
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag.Equals("Player"))
+        {
+            pickUpText.gameObject.SetActive(false);
+            isPickUp = false;
+
+        }
+    }
+
+    void PickUp()
+    {
+        Destroy(gameObject);
+
+    }
+
+
 
 }
