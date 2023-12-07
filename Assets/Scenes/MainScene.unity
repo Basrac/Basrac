@@ -1336,7 +1336,6 @@ GameObject:
   - component: {fileID: 1103643747}
   - component: {fileID: 1103643746}
   - component: {fileID: 1103643745}
-  - component: {fileID: 1103643749}
   - component: {fileID: 1103643750}
   m_Layer: 5
   m_Name: UI
@@ -1439,18 +1438,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1103643749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103643744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7b1834789307b47af48cf9cb06b359, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1103643750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2301,7 +2288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499090696}
   - component: {fileID: 1499090695}
-  - component: {fileID: 1499090694}
+  - component: {fileID: 1499090697}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -2309,21 +2296,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1499090694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499090693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb2db5223e8864c4fa8fe4a8c4e41d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bgmSource: {fileID: 1499090695}
-  VolumeSlider: {fileID: 1150075773}
-  jump: {fileID: 8300000, guid: 82f5f2dcdbafd4ac29b83181599cf0f2, type: 3}
 --- !u!82 &1499090695
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2435,6 +2407,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1499090697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499090693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2db5223e8864c4fa8fe4a8c4e41d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bgmSource: {fileID: 1499090695}
+  VolumeSlider: {fileID: 1150075773}
+  jump: {fileID: 8300000, guid: 82f5f2dcdbafd4ac29b83181599cf0f2, type: 3}
 --- !u!1 &1589173249
 GameObject:
   m_ObjectHideFlags: 0
