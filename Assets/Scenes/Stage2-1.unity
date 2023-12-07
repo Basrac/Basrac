@@ -2150,7 +2150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 540268624}
   - component: {fileID: 540268623}
-  - component: {fileID: 540268622}
+  - component: {fileID: 540268625}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -2158,21 +2158,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &540268622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540268621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb2db5223e8864c4fa8fe4a8c4e41d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bgmSource: {fileID: 540268623}
-  VolumeSlider: {fileID: 1803037282}
-  jump: {fileID: 8300000, guid: 82f5f2dcdbafd4ac29b83181599cf0f2, type: 3}
 --- !u!82 &540268623
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2284,6 +2269,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540268625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540268621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2db5223e8864c4fa8fe4a8c4e41d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bgmSource: {fileID: 540268623}
+  VolumeSlider: {fileID: 1803037282}
+  jump: {fileID: 8300000, guid: 82f5f2dcdbafd4ac29b83181599cf0f2, type: 3}
 --- !u!1 &549329059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,6 +2295,7 @@ GameObject:
   - component: {fileID: 549329062}
   - component: {fileID: 549329061}
   - component: {fileID: 549329060}
+  - component: {fileID: 549329063}
   m_Layer: 0
   m_Name: door
   m_TagString: Door
@@ -2382,6 +2383,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &549329063
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549329059}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 2.56}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.28, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &631697377
 GameObject:
   m_ObjectHideFlags: 0
