@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
+    private static SoundManager _instance;
+
     [SerializeField] private AudioSource _bgmSource;
     public Slider VolumeSlider;
 
@@ -14,8 +16,25 @@ public class SoundManager : MonoBehaviour
     private PlayerMovement _controller;
 
     public AudioClip jump;
-    // public AudioClip landing;
     private AudioSource audioSource;
+
+    public static SoundManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<SoundManager>();
+                if (_instance == null)
+                {
+                    // 씬에 SoundManager 인스턴스가 없는 경우 새로 생성
+                    GameObject soundManagerObject = new GameObject("SoundManager");
+                    _instance = soundManagerObject.AddComponent<SoundManager>();
+                }
+            }
+            return _instance;
+        }
+    }
 
     void Start()
     {
