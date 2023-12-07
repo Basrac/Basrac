@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     public GameObject GameOverPopup;
-
+    public PlayerMoveBtn playerMoveBtnScript;
     private Animator animator;
     public SpriteRenderer Img_Renderer;
     public Sprite SpriteLeft;
@@ -14,8 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower = 1f;
     public int maxHealth = 1;
     public int boom;
-    
-    
+    public int jumpPossible;
+
+
     public int maxBoom;
  
     Rigidbody2D rigid;
@@ -24,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public event JumpAction OnJumpEvent;
 
     Vector3 movement;
-    bool isJumping = false;
+    int jumpCount;
+    bool grounded = false;
     bool isDie = false;
 
     int health = 1;
@@ -36,23 +38,17 @@ public class PlayerMovement : MonoBehaviour
         rigid = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponentInChildren<Animator>();
 
+        jumpCount = jumpPossible;
         health = maxHealth;
     }
 
     //Graphic & Input Updates	
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
-            isJumping = true;
+        BtnMove();
+        BtnJump();
 
-            if (OnJumpEvent != null)
-            {
-                OnJumpEvent();
-            }
-        }
-
-        if(health == 0)
+        if (health == 0)
         {
             if (!isDie)
                 Die();
@@ -97,18 +93,50 @@ public class PlayerMovement : MonoBehaviour
         transform.position += moveVelocity * movePower * Time.deltaTime;
     }
 
+    void BtnMove()
+    {
+        Vector3 moveVelocity = Vector3.zero;
+
+        if (playerMoveBtnScript.IsLeftButtonDown == true)
+        {
+            Img_Renderer.sprite = SpriteLeft;
+            moveVelocity = Vector3.left;
+        }
+
+        else if (playerMoveBtnScript.IsRightButtonDown == true)
+        {
+            Img_Renderer.sprite = SpriteRight;
+            moveVelocity = Vector3.right;
+        }
+
+        transform.position += moveVelocity * movePower * Time.deltaTime;
+    }
+
     void Jump()
     {
-        if (!isJumping)
-            return;
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
+        {
+            rigid.velocity = Vector2.zero;
 
-        //Prevent Velocity amplification.
-        rigid.velocity = Vector2.zero;
+            Vector2 jumpVelocity = new Vector2(0, jumpPower);
+            rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
 
-        Vector2 jumpVelocity = new Vector2(0, jumpPower);
-        rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
+            jumpCount--;
+        }
+    }
 
-        isJumping = false;
+    void BtnJump()
+    {
+        if (playerMoveBtnScript.IsJumpButtonClick == true && jumpCount > 0)
+        {
+            rigid.velocity = Vector2.zero;
+
+            Vector2 jumpVelocity = new Vector2(0, jumpPower);
+            rigid.AddForce(jumpVelocity, ForceMode2D.Impulse);
+
+            jumpCount--;
+        }
+        playerMoveBtnScript.IsJumpButtonClick = false;
     }
 
     void Die()
@@ -132,12 +160,27 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.transform.tag != null)
+        {
+            grounded = true;
+            jumpCount = jumpPossible;
+        }
+
         if (collision.gameObject.CompareTag("obstacle"))
         {
             TakeDamage(10);
         }
 
     }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.transform.tag != null)
+        {
+            grounded = false;
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         health -= damage;
