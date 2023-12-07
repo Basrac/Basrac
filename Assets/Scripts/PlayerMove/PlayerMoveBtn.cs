@@ -4,30 +4,46 @@ using UnityEngine;
 
 public class PlayerMoveBtn : MonoBehaviour
 {
-    public bool IsButtonDown;
+    public bool IsLeftButtonDown;
+    public bool IsRightButtonDown;
+    public bool IsJumpButtonClick;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        IsLeftButtonDown = false;
+        IsRightButtonDown = false;
+        IsJumpButtonClick = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsButtonDown)
-        {
-            //¸í·É¾î
-        }
+
     }
 
-    public void PointerDown()
+    public void LeftPointerDown()
     {
-        IsButtonDown = true;
+        IsLeftButtonDown = true;
     }
 
-    public void PointerUp()
+    public void LeftPointerUp()
     {
-        IsButtonDown = false;
+        IsLeftButtonDown = false;
+    }
+
+    public void RightPointerDown()
+    {
+        IsRightButtonDown = true;
+    }
+
+    public void RightPointerUp()
+    {
+        IsRightButtonDown = false;
+    }
+
+    public void JumpBtnClick()
+    {
+        IsJumpButtonClick = true;
     }
 }
