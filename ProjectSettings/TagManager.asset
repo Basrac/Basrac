@@ -9,6 +9,7 @@ TagManager:
   - Door
   - Wall
   - Boom
+  - Ground
   layers:
   - Default
   - TransparentFX
