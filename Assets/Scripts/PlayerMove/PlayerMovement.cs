@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
     //Graphic & Input Updates	
     void Update()
     {
+        Move();
+        Jump();
         BtnMove();
         BtnJump();
 
@@ -68,8 +70,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (health == 0)
             return;
-        Move();
-        Jump();
     }
 
     //---------------------------------------------------[Movement Function]
