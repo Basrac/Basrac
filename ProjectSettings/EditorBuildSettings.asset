@@ -5,24 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/TestScenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: d64038889cb925c46a78079adc0ea9f7
-  - enabled: 0
-    path: Assets/Scenes/TestScenes/KWKScene.unity
-    guid: 586e72f3af39ee54f9ed5896a6d1fa42
-  - enabled: 0
-    path: Assets/Scenes/TestScenes/SG_Test(Tutorial).unity
-    guid: dd591baec9ad56b4db1b4d598499c9a9
-  - enabled: 0
-    path: Assets/Scenes/TestScenes/LDH_Test(1-1stage).unity
-    guid: 08020d380ce32f44aa8c38d5c75eaab1
-  - enabled: 0
-    path: Assets/Scenes/TestScenes/MainScene1.unity
-    guid: 4ccb3e4224679426dbe04875645ebe15
   - enabled: 1
     path: Assets/Scenes/Stage1-1.unity
     guid: b1940e0dcd9ac4e3dad29a1eec984789
@@ -41,10 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage2-3.unity
     guid: b16babce7623e43799144f4009688e89
-  - enabled: 0
-    path: Assets/Scenes/TestScenes/TEST(Stage3-2).unity
-    guid: ec85d840e04e44b608b10fc8ff28af98
-  - enabled: 0
-    path: Assets/Scenes/TestScenes/GameOver.unity
-    guid: c7313ad8c8cddbf40a07c5004035574f
   m_configObjects: {}
