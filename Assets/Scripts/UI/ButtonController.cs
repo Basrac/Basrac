@@ -54,7 +54,7 @@ public class ButtonController : MonoBehaviour
     { 
         Debug.Log("다음스테이지버튼: " + currentSceneName);
 
-        string[] nextScenes = { "Stage1-1", "Stage1-2", "Stage1-3", "Stage2-1", "Stage2-2", "Stage2-3", "Stage3-1" };
+        string[] nextScenes = { "Stage1-1", "Stage1-2", "Stage1-3", "Stage2-1", "Stage2-2", "Stage2-3" };
         int currentIndex = System.Array.IndexOf(nextScenes, currentSceneName);
 
         if (currentIndex != -1 && currentIndex < nextScenes.Length - 1)
