@@ -12999,6 +12999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingBtn
       objectReference: {fileID: 0}
+    - target: {fileID: 3771723761120840296, guid: 5a1aa146c4e84b740ae1faf89673bb0b, type: 3}
+      propertyPath: SettingPopup
+      value: 
+      objectReference: {fileID: 1060420614}
     - target: {fileID: 6699338815377960613, guid: 5a1aa146c4e84b740ae1faf89673bb0b, type: 3}
       propertyPath: m_Pivot.x
       value: 1
