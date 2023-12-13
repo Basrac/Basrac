@@ -3,7 +3,7 @@
 
 ## Team Notion
 
- https://www.notion.so/a41d14eeab20449c86f766cd47bf193b
+https://www.notion.so/a41d14eeab20449c86f766cd47bf193b
 
 ### Team Member
 - 어하림(팀장) https://github.com/eohalim
