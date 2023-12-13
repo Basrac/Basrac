@@ -16,6 +16,12 @@ https://www.notion.so/a41d14eeab20449c86f766cd47bf193b
 - 이성권(팀원) https://github.com/LeeSeongGwon
 - 이두희(팀원) https://github.com/Dooheee
 
+### 담당 기능
+- 어하림 : 터치패드 , UI , 
+- 이두희 : 맵 , UI , 
+- 이성권 : 맵 , 아이템 관리
+- 장성민 : 캐릭터 이동관련 , 에니메이션
+
 ### 시연 영상
 - 
 
