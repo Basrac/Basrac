@@ -477,7 +477,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 393157896}
         m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: ExitButtonClick
+        m_MethodName: exitButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1492,7 +1492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 347.02722, y: -494.97272}
+  m_AnchoredPosition: {x: 333, y: -572.88}
   m_SizeDelta: {x: 26.0872, y: 26.0874}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &658447771
@@ -2111,7 +2111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 228.49109, y: -437.3511}
+  m_AnchoredPosition: {x: 222, y: -573.59}
   m_SizeDelta: {x: 25.1596, y: 25.1598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1157215900
@@ -2209,7 +2209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475.09448, y: -463.09448}
+  m_AnchoredPosition: {x: 501.42, y: -573}
   m_SizeDelta: {x: 26.3307, y: 26.3309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1200685347
@@ -2307,7 +2307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129.16, y: -42}
+  m_AnchoredPosition: {x: 292.08, y: -28.86}
   m_SizeDelta: {x: 392.35, y: 372.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1202154088
@@ -2616,7 +2616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 418.838, y: -423.0219}
+  m_AnchoredPosition: {x: 418.838, y: -601.4}
   m_SizeDelta: {x: 30.4656, y: 30.4659}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1406754105
@@ -3376,7 +3376,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1103643750}
+      - m_Target: {fileID: 393157896}
         m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
         m_MethodName: LevelBtnButtonClick
         m_Mode: 1

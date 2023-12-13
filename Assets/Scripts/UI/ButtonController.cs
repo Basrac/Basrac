@@ -33,6 +33,10 @@ public class ButtonController : MonoBehaviour
         SettingPopup.SetActive(true);
     }
 
+    public void exitButtonClick()
+    {
+        StageSelectPopup.SetActive(false);
+    }
 
     public void ExitBtnButtonClick()
     {
