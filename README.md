@@ -19,7 +19,7 @@ https://www.notion.so/a41d14eeab20449c86f766cd47bf193b
  - Visual Studio
  - Window 10
    
-### framework
+### Framework
    - C#
     
 ### Game Engine
