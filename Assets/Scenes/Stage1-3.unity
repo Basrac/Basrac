@@ -150,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40456737}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -49.87, y: -4.9700003, z: 1.7320342}
+  m_LocalPosition: {x: -49.87, y: -3.9, z: 1.7320342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1106,7 +1106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879744154}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -78.83, y: -6.8400006, z: 1.7320342}
+  m_LocalPosition: {x: -79.8, y: -6.8400006, z: 1.7320342}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1309,7 +1309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959675951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -77.67, y: -6.8400006, z: 1.7320342}
+  m_LocalPosition: {x: -78.4, y: -6.8400006, z: 1.7320342}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1444,7 +1444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039533295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.93, y: -9.85, z: 1.7320342}
+  m_LocalPosition: {x: -60.3, y: -8.9, z: 1.7320342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2005,6 +2005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoundPopup: {fileID: 0}
   SettingPopup: {fileID: 1246322137}
+  StageSelectPopup: {fileID: 0}
 --- !u!114 &1102853627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14109,7 +14110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219320776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.4000015, y: -3.5400002, z: 1.7320342}
+  m_LocalPosition: {x: -7.8, y: -2.5, z: 1.7320342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14163,7 +14164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02834165b9002a4895195fc73df395a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 300
+  rotationSpeed: 100
   radius: 7
 --- !u!212 &1219320780
 SpriteRenderer:
@@ -15095,8 +15096,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583087231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.19, y: -7.55, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 86, y: -6.6, z: 0}
+  m_LocalScale: {x: 0.99116, y: 0.99116, z: 0.99116}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -15909,6 +15910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoundPopup: {fileID: 0}
   SettingPopup: {fileID: 0}
+  StageSelectPopup: {fileID: 0}
 --- !u!114 &1785725232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16146,7 +16148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904464484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.270004, y: -2.6400006, z: 1.7320342}
+  m_LocalPosition: {x: -65.6, y: -1.9, z: 1.7320342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
