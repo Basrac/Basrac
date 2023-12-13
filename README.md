@@ -17,11 +17,11 @@ https://www.notion.so/a41d14eeab20449c86f766cd47bf193b
 
 ### Development Environment
  - Visual Studio
-   - Window 10
+ - Window 10
    
 ### framework
    - C#
-   - 
+    
 ### Game Engine
    - Unity - 2022.3.2f1
 
