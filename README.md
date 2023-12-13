@@ -25,5 +25,5 @@ https://www.notion.so/a41d14eeab20449c86f766cd47bf193b
 ### Game Engine
    - Unity - 2022.3.2f1
 
-### version management
+### Version Management
    - GitHub
