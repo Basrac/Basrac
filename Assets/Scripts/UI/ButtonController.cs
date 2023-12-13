@@ -9,6 +9,7 @@ public class ButtonController : MonoBehaviour
 {
     public GameObject SoundPopup;
     public GameObject SettingPopup;
+    public GameObject StageSelectPopup;
 
     //startscene관련 버튼
     public void StartBtnButtonClick()
@@ -19,6 +20,11 @@ public class ButtonController : MonoBehaviour
     public void SoundBtnButtonClick()
     {
         SoundPopup.SetActive(true);
+    }
+
+    public void LevelBtnButtonClick()
+    {
+        StageSelectPopup.SetActive(true);
     }
 
     // Popup관련 버튼 
