@@ -23,7 +23,7 @@ https://www.notion.so/a41d14eeab20449c86f766cd47bf193b
 - 장성민 : 캐릭터 이동관련 , 에니메이션
 
 ### 시연 영상
-- 
+- https://www.youtube.com/watch?v=m9p5popchJk&t=60s
 
 ### 사용한 에셋
 - https://assetstore.unity.com/packages/2d/characters/furball-2d-v1-2-mobile-optimized-40588
